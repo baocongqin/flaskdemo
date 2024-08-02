@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax test</title>
+</head>
+<script src="static/js/jquery-3.7.1.js"></script>
+<link rel="stylesheet" href="static/css/common.css">
+
+
+<body>
+
+
+
+    <div id="main">
+
+
+
+
+
+    </div>
+
+    <footer>
+
+        <button id="btn_test_get">test jquery ajax GET</button>
+        <span class="sep5"></span>
+        <button id="btn_test_post">test jquery ajax POST</button>
+    </footer>
+
+
+    <script>
+
+
+        $("#btn_test_get").click(function () {
+
+            $.get("/get/", { name: "zs", age: 29, gender: "boy" })
+                .done(function (data) {
+
+                    console.log(data);
+
+                })
+
+        })
+
+        $("#btn_test_post").click(function () {
+
+            $.post("/post/", { name: "lisi", age: 39, gender: "girl" })
+                .done(function (data) {
+
+                    console.log(data);
+
+                })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+    #main {
+
+        height: 200px;
+        position: relative;
+    }
+
+
+    footer {
+
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 10px;
+
+    }
+
+    footer>button {
+        height: 30px;
+    }
+
+    /* 小间隔 */
+    span.sep5{
+
+            display: inline-block;
+            width: 5px;
+    }
+    span.sep10{
+
+        display: inline-block;
+        width: 10px;
+    }
