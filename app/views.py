@@ -24,5 +24,10 @@ def post():
     print(request.form)
     return dict(request.form)
 
+@blue.route("/postjson/",methods=['POST'])
+def postjson():
+    print(request.json)
+    return {"status":200}
+
 
 

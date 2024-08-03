@@ -27,6 +27,9 @@
         <button id="btn_test_get">test jquery ajax GET</button>
         <span class="sep5"></span>
         <button id="btn_test_post">test jquery ajax POST</button>
+        <span class="sep5"></span>
+        <button id="btn_test_post_json">test jquery ajax POST JSON</button>
+
     </footer>
 
 
@@ -54,6 +57,31 @@
                 })
 
         })
+
+        $("#btn_test_post_json").click(function () {
+
+           
+            $.ajax({
+
+                url:"/postjson/",
+                contentType:"application/json",
+                type:"post",
+                data: JSON.stringify( { name: "lisi", age: 39, gender: "girl" }),
+                dataType:"json",
+                success:function(res){
+
+                    console.log(res);
+
+                }
+
+
+
+            })
+
+        })
+
+
+
 
     </script>
 
